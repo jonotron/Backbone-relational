@@ -1259,6 +1259,7 @@
 			}
 			// Update the 'idAttribute' in Backbone.store if; we don't want it to miss an 'id' update due to {silent:true}
 			else if ( attributes && this.idAttribute in attributes ) {
+				this.initializeRelations();
 				Backbone.Relational.store.update( this );
 			}
 			
